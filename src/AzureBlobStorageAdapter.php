@@ -130,6 +130,8 @@ class AzureBlobStorageAdapter extends AbstractAdapter
 
     public function createDir($dirname, Config $config)
     {
+        $this->upload($dirname . '/', '', $config);                                                                                      
+
         return ['path' => $dirname, 'type' => 'dir'];
     }
 
